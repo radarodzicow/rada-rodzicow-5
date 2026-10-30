@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Najważniejsze informacje i odpowiedzi na pytania dotyczące składki na Radę Rodziców Żłobka nr 5.">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>Rada Rodziców Żłobka nr 5 — pytania i odpowiedzi</title>
+  <style>
+    :root {
+      --paper: #fbf8f2;
+      --cream: #f3ebdd;
+      --sage: #b9c7b0;
+      --sage-dark: #657660;
+      --rose: #dfbeba;
+      --blue: #b9cad5;
+      --yellow: #ead9a5;
+      --ink: #3f4541;
+      --muted: #6f756f;
+      --white: #fffdf9;
+      --line: rgba(83, 97, 85, .16);
+      --shadow: 0 18px 60px rgba(72, 77, 68, .08);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(223, 190, 186, .25), transparent 26rem),
+        radial-gradient(circle at 96% 32%, rgba(185, 202, 213, .28), transparent 25rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 20;
+      top: 10px;
+      left: 10px;
+      padding: .7rem 1rem;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+      padding: clamp(46px, 8vw, 90px) clamp(22px, 8vw, 100px);
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 40px;
+      background: rgba(255, 253, 249, .76);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .hero__content { position: relative; z-index: 2; max-width: 760px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      margin: 0 0 1.2rem;
+      padding: .5rem .85rem;
+      border-radius: 999px;
+      background: rgba(185, 199, 176, .26);
+      color: var(--sage-dark);
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sage-dark);
+      opacity: .65;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 auto 1.3rem;
+      font-size: clamp(2.55rem, 7vw, 5.2rem);
+      letter-spacing: -.045em;
+    }
+
+    .hero__lead {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 2.1vw, 1.22rem);
+    }
+
+    .hero__hint {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: 2rem;
+      color: var(--sage-dark);
+      font-size: .92rem;
+      text-decoration: none;
+    }
+
+    .hero__hint span {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--cream);
+    }
+
+    .doodle {
+      position: absolute;
+      z-index: 1;
+      width: clamp(86px, 14vw, 170px);
+      color: currentColor;
+      opacity: .42;
+      pointer-events: none;
+    }
+
+    .doodle * {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .doodle--sun { top: 28px; right: 35px; color: #d5b860; transform: rotate(6deg); }
+    .doodle--house { bottom: 30px; left: 35px; color: #91a98a; transform: rotate(-5deg); }
+    .doodle--stars { top: 42px; left: 42px; color: #b98f8b; transform: rotate(-8deg); }
+
+    .section-label {
+      margin: 0 0 .75rem;
+      color: var(--sage-dark);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.55rem);
+      letter-spacing: -.035em;
+    }
+
+    .toc {
+      position: relative;
+      margin-top: clamp(60px, 8vw, 100px);
+      padding: clamp(26px, 5vw, 56px);
+      border-radius: var(--radius);
+      background: #e9efe6;
+      box-shadow: var(--shadow);
+    }
+
+    .toc__head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .toc__head p { max-width: 430px; margin: 0; color: var(--muted); }
+
+    .toc__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .toc__link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 76px;
+      padding: 14px 16px;
+      border: 1px solid rgba(101, 118, 96, .12);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, .64);
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .toc__link:hover,
+    .toc__link:focus-visible {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 10px 24px rgba(85, 100, 80, .08);
+      outline: none;
+    }
+
+    .toc__number {
+      flex: 0 0 auto;
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--sage-dark);
+      font-family: Georgia, serif;
+      font-size: 1.08rem;
+    }
+
+    .toc__text { font-size: .93rem; font-weight: 650; line-height: 1.35; }
+
+    .faq {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(72px, 10vw, 120px) 0 42px;
+    }
+
+    .faq__heading { margin-bottom: 34px; text-align: center; }
+
+    .faq__list { display: grid; gap: 14px; }
+
+    .faq-item {
+      scroll-margin-top: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 253, 249, .86);
+      box-shadow: 0 8px 30px rgba(65, 75, 66, .04);
+    }
+
+    .faq-item[open] { box-shadow: 0 16px 40px rgba(65, 75, 66, .08); }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 92px;
+      padding: 20px 24px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 720;
+      line-height: 1.45;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary:focus-visible {
+      outline: 3px solid rgba(101, 118, 96, .3);
+      outline-offset: -4px;
+      border-radius: 20px;
+    }
+
+    .faq-item__number {
+      flex: 0 0 auto;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50%;
+      color: #596657;
+      font-family: Georgia, serif;
+      font-size: 1.12rem;
+    }
+
+    .faq-item:nth-child(4n+1) .faq-item__number { background: rgba(185, 199, 176, .42); }
+    .faq-item:nth-child(4n+2) .faq-item__number { background: rgba(223, 190, 186, .42); }
+    .faq-item:nth-child(4n+3) .faq-item__number { background: rgba(185, 202, 213, .45); }
+    .faq-item:nth-child(4n+4) .faq-item__number { background: rgba(234, 217, 165, .5); }
+
+    .faq-item__title { flex: 1; }
+
+    .faq-item__icon {
+      position: relative;
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--cream);
+    }
+
+    .faq-item__icon::before,
+    .faq-item__icon::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 7px;
+      width: 12px;
+      height: 2px;
+      border-radius: 4px;
+      background: var(--sage-dark);
+      transition: transform .2s ease;
+    }
+
+    .faq-item__icon::after { transform: rotate(90deg); }
+    .faq-item[open] .faq-item__icon::after { transform: rotate(0); }
+
+    .faq-item__answer {
+      padding: 0 84px 28px;
+      color: var(--muted);
+    }
+
+    .faq-item__answer p { margin: 0 0 1rem; }
+    .faq-item__answer p:last-child { margin-bottom: 0; }
+
+    .faq-item__answer ul {
+      margin: .6rem 0 1.1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .faq-item__answer li {
+      position: relative;
+      margin: .45rem 0;
+      padding-left: 1.45rem;
+    }
+
+    .faq-item__answer li::before {
+      content: "";
+      position: absolute;
+      top: .72rem;
+      left: .15rem;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .note {
+      margin-top: 1.25rem;
+      padding: 16px 18px;
+      border-left: 3px solid var(--rose);
+      border-radius: 5px 14px 14px 5px;
+      background: rgba(223, 190, 186, .16);
+      color: #616762;
+    }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      margin-top: 72px;
+      padding: clamp(30px, 6vw, 58px);
+      border-radius: 30px;
+      background: #e8e1d4;
+    }
+
+    .contact h2 { max-width: 680px; font-size: clamp(1.9rem, 4vw, 3rem); }
+    .contact p { max-width: 690px; margin: 1rem 0 0; color: var(--muted); }
+
+    .contact__badge {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      width: 118px;
+      height: 118px;
+      place-items: center;
+      border: 1px dashed rgba(101, 118, 96, .45);
+      border-radius: 50%;
+      color: var(--sage-dark);
+      font-family: Georgia, serif;
+      text-align: center;
+      transform: rotate(4deg);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 26px 10px 0;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    footer a { text-underline-offset: 3px; }
+
+    .back-to-top {
+      position: fixed;
+      z-index: 10;
+      right: clamp(14px, 2.5vw, 34px);
+      bottom: clamp(18px, 3vw, 34px);
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(101, 118, 96, .18);
+      border-radius: 50%;
+      background: rgba(255, 253, 249, .9);
+      color: var(--sage-dark);
+      box-shadow: 0 10px 28px rgba(65, 75, 66, .14);
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .back-to-top:hover,
+    .back-to-top:focus-visible {
+      transform: translateY(-3px);
+      background: var(--white);
+      outline: 3px solid rgba(101, 118, 96, .24);
+      outline-offset: 3px;
+    }
+
+    .back-to-top svg {
+      width: 21px;
+      height: 21px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 780px) {
+      .page { width: min(100% - 20px, 720px); padding-top: 10px; }
+      .hero { min-height: 500px; border-radius: 28px; }
+      .doodle--stars { top: 18px; left: 18px; }
+      .doodle--sun { top: 20px; right: 15px; }
+      .doodle--house { bottom: 18px; left: 18px; }
+      .toc__head { display: block; }
+      .toc__head p { margin-top: 14px; }
+      .toc__grid { grid-template-columns: 1fr; }
+      .faq-item summary { align-items: flex-start; padding: 18px; }
+      .faq-item__answer { padding: 0 22px 24px; }
+      .contact { grid-template-columns: 1fr; }
+      .contact__badge { width: 96px; height: 96px; }
+      footer { flex-direction: column; gap: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body id="poczatek">
+  <a class="skip-link" href="#pytania">Przejdź do pytań</a>
+
+  <main class="page">
+    <header class="hero">
+      <svg class="doodle doodle--stars" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M29 18l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+        <path d="M82 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+        <path d="M57 78l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+      </svg>
+      <svg class="doodle doodle--sun" viewBox="0 0 150 150" aria-hidden="true">
+        <circle cx="75" cy="75" r="28"/>
+        <path d="M75 20v18M75 112v18M20 75h18M112 75h18M36 36l13 13M101 101l13 13M114 36l-13 13M49 101l-13 13"/>
+        <path d="M61 72c4 3 8 3 12 0M83 72c3 3 6 3 9 0M62 87c9 7 20 7 28 0"/>
+      </svg>
+      <svg class="doodle doodle--house" viewBox="0 0 160 140" aria-hidden="true">
+        <path d="M22 69L80 22l58 47M35 60v62h90V60M66 122V88h28v34"/>
+        <path d="M53 75h17v16H53zM101 75h17v16h-17zM16 122h128"/>
+        <path d="M124 41V22h12v29M32 33c10-10 20-10 30 0"/>
+      </svg>
+
+      <div class="hero__content">
+        <p class="eyebrow">Rada Rodziców · Żłobek nr 5</p>
+        <h1>Wspólnie dla naszych dzieci</h1>
+        <p class="hero__lead">W tym miejscu znajdą Państwo odpowiedzi na najczęściej zadawane pytania oraz informacje dotyczące działalności Rady Rodziców.</p>
+        <a class="hero__hint" href="#spis-pytan"><span aria-hidden="true">↓</span> Poznaj odpowiedzi</a>
+      </div>
+    </header>
+
+    <nav class="toc" id="spis-pytan" aria-labelledby="spis-heading">
+      <div class="toc__head">
+        <div>
+          <p class="section-label">Spis pytań</p>
+          <h2 id="spis-heading">O czym można przeczytać?</h2>
+        </div>
+        <p>Proszę wybrać interesujący temat. Odpowiedź można później rozwinąć lub zwinąć jednym kliknięciem.</p>
+      </div>
+      <div class="toc__grid">
+        <a class="toc__link" href="#pytanie-1"><span class="toc__number">1</span><span class="toc__text">Dlaczego zbiórka rozpoczęła się później?</span></a>
+        <a class="toc__link" href="#pytanie-2"><span class="toc__number">2</span><span class="toc__text">Na co przeznaczymy zebrane środki?</span></a>
+        <a class="toc__link" href="#pytanie-3"><span class="toc__number">3</span><span class="toc__text">Jak organizowane są sesje fotograficzne?</span></a>
+        <a class="toc__link" href="#pytanie-4"><span class="toc__number">4</span><span class="toc__text">Dlaczego składka wynosi 250 zł?</span></a>
+        <a class="toc__link" href="#pytanie-5"><span class="toc__number">5</span><span class="toc__text">Skąd różnica między wpłatą semestralną a roczną?</span></a>
+        <a class="toc__link" href="#pytanie-6"><span class="toc__number">6</span><span class="toc__text">Jak będzie wyglądać współpraca i komunikacja?</span></a>
+        <a class="toc__link" href="#pytanie-7"><span class="toc__number">7</span><span class="toc__text">Co stanie się z niewykorzystanymi środkami?</span></a>
+        <a class="toc__link" href="#pytanie-8"><span class="toc__number">8</span><span class="toc__text">Czy można wpłacić mniejszą kwotę?</span></a>
+      </div>
+    </nav>
+
+    <section class="faq" id="pytania" aria-label="Pytania i odpowiedzi">
+      <div class="faq__heading">
+        <p class="section-label">Pytania i odpowiedzi</p>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq-item" id="pytanie-1">
+          <summary><span class="faq-item__number">1</span><span class="faq-item__title">Dlaczego składka zbierana jest w październiku i listopadzie, a nie od września?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Żłobek jest nowo otwartą placówką. Do tej pory nie funkcjonowała w nim Rada Rodziców, nie było również założonego konta ani opracowanego planu rocznego. Wszystkie te kwestie formalne wymagały czasu, dlatego zbiórka składek rozpoczęła się w październiku, a nie na początku września.</p>
+            <p>Pierwsze miesiące funkcjonowania placówki były również okresem adaptacyjnym, w którym liczba dzieci była ograniczona.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-2">
+          <summary><span class="faq-item__number">2</span><span class="faq-item__title">Na co zostaną przeznaczone zebrane pieniądze?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Środki zgromadzone na koncie Rady planujemy przeznaczyć między innymi na:</p>
+            <ul>
+              <li>prezenty dla dzieci z okazji Bożego Narodzenia, Wielkanocy i Dnia Dziecka,</li>
+              <li>atrakcje organizowane przez firmy zewnętrzne, takie jak teatrzyki, koncerty i zajęcia muzyczne,</li>
+              <li>zajęcia sensoryczne, w tym gordonki,</li>
+              <li>spotkania ze zwierzętami i inne dodatkowe atrakcje,</li>
+              <li>sesje fotograficzne.</li>
+            </ul>
+            <p>Chcemy, aby dzieci miały możliwość uczestniczenia w różnorodnych wydarzeniach, które będą dla nich nie tylko atrakcyjne, lecz także rozwijające.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-3">
+          <summary><span class="faq-item__number">3</span><span class="faq-item__title">Jak wygląda kwestia organizacji sesji fotograficznych?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Fotograf organizuje dwudniową sesję zdjęciową, dysponuje profesjonalnym sprzętem i jest przygotowany do pracy z najmłodszymi dziećmi.</p>
+            <p>Jego wynagrodzenie pochodzi wyłącznie ze sprzedaży zdjęć zakupionych przez rodziców. Nie ponosimy dodatkowych kosztów za samo wykonanie sesji. Jednocześnie sfinansowanie jednego zdjęcia ze środków Rady daje fotografowi gwarancję minimalnego wynagrodzenia w przypadku, gdyby rodzice nie zdecydowali się na zakup fotografii, a nam pozwala zarezerwować dogodny termin.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-4">
+          <summary><span class="faq-item__number">4</span><span class="faq-item__title">Dlaczego składka wynosi 250 zł?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Każda atrakcja organizowana przez zewnętrznych wykonawców wiąże się z określonymi kosztami. Wysokość składki została ustalona na podstawie wstępnego oszacowania wydatków związanych z realizacją planowanych wydarzeń.</p>
+            <p>Warto również zaznaczyć, że żłobek samodzielnie dba o organizację wielu atrakcji dla dzieci, a składka Rady pozwoli nam dodatkowo zapewnić im różnorodne wydarzenia z udziałem zewnętrznych wykonawców.</p>
+            <p>Dla porównania składki w wielu innych żłobkach wynoszą około 300–350 zł. W naszym przypadku proponowana kwota jest niższa.</p>
+            <p>Rozłożenie kwoty 250 zł na 10 miesięcy daje 25 zł miesięcznie. Przyjęliśmy taki sposób liczenia, uwzględniając fakt, że wrzesień był miesiącem organizacyjnym, natomiast sierpień najprawdopodobniej będzie miesiącem wolnym od zajęć. Nie mamy jeszcze ostatecznego potwierdzenia w tej kwestii, jednak już na etapie ustalania składki założyliśmy, że nie będziemy obciążać Państwa opłatą za ten miesiąc.</p>
+            <p>W efekcie składka wynosi 250 zł za cały rok funkcjonowania placówki.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-5">
+          <summary><span class="faq-item__number">5</span><span class="faq-item__title">Dlaczego wpłata semestralna wynosi 130 zł, a roczna 250 zł?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Wpłata w dwóch ratach wynosi 130 zł za semestr, co daje łącznie 260 zł w skali roku. Jest to nieco wyższa kwota niż w przypadku jednorazowej wpłaty rocznej.</p>
+            <p>Takie rozwiązanie ma delikatnie zachęcić do dokonania wpłaty z góry. Wynika to przede wszystkim ze specyfiki organizacji wydarzeń dla dzieci. Terminy u wykonawców często rezerwowane są z dużym wyprzedzeniem, ponieważ z ich usług korzysta wiele toruńskich żłobków. Dostępność terminów bywa ograniczona, a sama rezerwacja często wiąże się z koniecznością wpłacenia zaliczki.</p>
+            <p>Dlatego tak ważne jest, abyśmy mogli odpowiednio wcześnie dysponować środkami na koncie Rady. Państwa wpłaty pozwalają nam planować wydarzenia i dokonywać niezbędnych rezerwacji.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-6">
+          <summary><span class="faq-item__number">6</span><span class="faq-item__title">Jak będzie wyglądać współpraca i przekazywanie bieżących informacji?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Rada Rodziców Żłobka nr 5 została powołana po raz pierwszy. Jest to również pierwszy rok funkcjonowania naszej placówki, dlatego zależy nam na dobrej współpracy z Państwem, wzajemnym zaufaniu i transparentności w podejmowanych działaniach.</p>
+            <p>Chcemy, aby wszystkie planowane atrakcje były dostosowane do potrzeb i możliwości dzieci. W przypadku wydarzeń wymagających Państwa zgody, w szczególności spotkań ze zwierzętami, będziemy na bieżąco informować Państwa o szczegółach i konsultować takie inicjatywy.</p>
+            <p>Zależy nam, aby mieli Państwo poczucie, że wspólnie tworzymy przestrzeń, w której dzieci mogą się rozwijać, doświadczać nowych rzeczy i czerpać radość z codziennego pobytu w żłobku.</p>
+            <p class="note"><strong>Kontakt:</strong> jeśli pozostaną pytania lub kwestie wymagające doprecyzowania, zachęcamy do kontaktu z przedstawicielami Rady na grupach WhatsApp. Adres e-mail zostanie podany wkrótce.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-7">
+          <summary><span class="faq-item__number">7</span><span class="faq-item__title">Co się stanie, jeśli nie wykorzystamy wszystkich zebranych środków? Czy pieniądze pozostaną na koncie Rady na kolejny rok?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Naszym założeniem jest takie zaplanowanie wydatków, aby wszystkie zebrane środki zostały wykorzystane na potrzeby dzieci w bieżącym roku szkolnym.</p>
+            <p>Rozumiemy również, że część dzieci będzie uczęszczać do naszego żłobka tylko przez jeden rok, dlatego zależy nam na tym, aby składki były wykorzystywane na bieżące potrzeby i atrakcje dla wszystkich dzieci w danym roku szkolnym.</p>
+            <p>Jeżeli jednak na koniec roku na koncie Rady pozostałaby niewielka kwota, której nie udałoby się już przeznaczyć na dodatkowe atrakcje, planujemy wykorzystać ją na drobne upominki dla dzieci z okazji rozpoczęcia wakacji. Chcemy, aby wszystkie zebrane pieniądze służyły dzieciom jeszcze w tym samym roku szkolnym.</p>
+            <p>Na kolejny rok szkolny zostanie otwarta nowa składka, która pozwoli Radzie zaplanować i sfinansować kolejne wydarzenia oraz atrakcje.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" id="pytanie-8">
+          <summary><span class="faq-item__number">8</span><span class="faq-item__title">Co w sytuacji, gdy 25 zł miesięcznie to dla mnie za dużo? Czy mogę wpłacać mniejszą kwotę?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Tak, oczywiście. Rozumiemy, że sytuacja każdej rodziny jest inna, dlatego mogą Państwo wpłacić taką kwotę, która jest dla Państwa komfortowa. Każde wsparcie — niezależnie od jego wysokości — jest dla nas ważne i pomaga w organizowaniu dodatkowych atrakcji dla dzieci.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="razem-heading">
+      <div>
+        <p class="section-label">Razem możemy więcej</p>
+        <h2 id="razem-heading">Tworzymy miejsce pełne dobrych doświadczeń</h2>
+        <p>Dziękujemy za Państwa zaufanie, pytania i każdą formę zaangażowania. To dzięki wspólnemu działaniu możemy wzbogacać codzienność dzieci o nowe, radosne i rozwijające przeżycia.</p>
+      </div>
+      <div class="contact__badge" aria-hidden="true">dla<br>dzieci ♡</div>
+    </section>
+
+    <footer>
+      <span>Rada Rodziców · Żłobek nr 5</span>
+      <a href="#spis-pytan">Wróć do spisu pytań ↑</a>
+    </footer>
+
+    <a class="back-to-top" href="#poczatek" aria-label="Wróć na początek strony" title="Wróć na początek strony">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+    </a>
+  </main>
+
+  <script>
+    document.querySelectorAll('.toc__link').forEach((link) => {
+      link.addEventListener('click', () => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target && target.tagName === 'DETAILS') target.open = true;
+      });
+    });
+  </script>
+</body>
+</html>
