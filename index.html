@@ -410,6 +410,18 @@
 
     footer a { text-underline-offset: 3px; }
 
+    .footer__identity {
+      display: grid;
+      gap: 5px;
+    }
+
+    .footer__contact {
+      color: var(--sage-dark);
+      font-weight: 650;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
     .back-to-top {
       position: fixed;
       z-index: 10;
@@ -515,6 +527,7 @@
         <a class="toc__link" href="#pytanie-6"><span class="toc__number">6</span><span class="toc__text">Jak będzie wyglądać współpraca i komunikacja?</span></a>
         <a class="toc__link" href="#pytanie-7"><span class="toc__number">7</span><span class="toc__text">Co stanie się z niewykorzystanymi środkami?</span></a>
         <a class="toc__link" href="#pytanie-8"><span class="toc__number">8</span><span class="toc__text">Czy można wpłacić mniejszą kwotę?</span></a>
+        <a class="toc__link" href="#pytanie-9"><span class="toc__number">9</span><span class="toc__text">Czy późniejsze dołączenie dziecka zmienia wysokość składki?</span></a>
       </div>
     </nav>
 
@@ -601,6 +614,15 @@
             <p>Tak, oczywiście. Rozumiemy, że sytuacja każdej rodziny jest inna, dlatego mogą Państwo wpłacić taką kwotę, która jest dla Państwa komfortowa. Każde wsparcie — niezależnie od jego wysokości — jest dla nas ważne i pomaga w organizowaniu dodatkowych atrakcji dla dzieci.</p>
           </div>
         </details>
+
+        <details class="faq-item" id="pytanie-9">
+          <summary><span class="faq-item__number">9</span><span class="faq-item__title">Co jeśli moje dziecko dołączyło później? Czy obowiązuje mnie pełna składka?</span><span class="faq-item__icon" aria-hidden="true"></span></summary>
+          <div class="faq-item__answer">
+            <p>Dzieci, które dołączyły do żłobka w październiku, listopadzie lub grudniu, również objęte są pełną składką na Radę Rodziców.</p>
+            <p>Obecnie gromadzimy środki i rezerwujemy terminy u organizatorów wydarzeń. Realizacja atrakcji oraz związanych z nimi wydatków nastąpi dopiero w kolejnych miesiącach. Dlatego termin dołączenia dziecka do żłobka w 2026 r. nie wpływa na wysokość składki.</p>
+            <p>Rodziców dzieci, które dołączą do żłobka od 2027 r., prosimy o kontakt mailowy z Radą Rodziców: <a href="mailto:radarodzicow.zlobeknr5@gmail.com">radarodzicow.zlobeknr5@gmail.com</a>.</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -614,7 +636,10 @@
     </section>
 
     <footer>
-      <span>Rada Rodziców · Żłobek nr 5</span>
+      <div class="footer__identity">
+        <span>Rada Rodziców · Żłobek nr 5</span>
+        <a class="footer__contact" href="mailto:radarodzicow.zlobeknr5@gmail.com">Kontakt: radarodzicow.zlobeknr5@gmail.com</a>
+      </div>
       <a href="#spis-pytan">Wróć do spisu pytań ↑</a>
     </footer>
 
